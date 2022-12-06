@@ -12,7 +12,7 @@ var builder = WebApplication.CreateBuilder(args);
 const string corsPolicy = "cors-app-policy";
 builder.Services.AddCors(c => c.AddPolicy(corsPolicy, corsPolicyBuilder =>
 {
-    corsPolicyBuilder.WithOrigins("http://localhost:3000")
+    corsPolicyBuilder.WithOrigins("http://localhost:3000", "https://pictureperfect.vercel.app")
         .AllowAnyMethod()
         .AllowAnyHeader();
 }));
